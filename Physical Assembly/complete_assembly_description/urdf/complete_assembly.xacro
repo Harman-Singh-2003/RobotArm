@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<robot name="complete_assembly" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find complete_assembly_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find complete_assembly_description)/urdf/complete_assembly.trans" />
+<xacro:include filename="$(find complete_assembly_description)/urdf/complete_assembly.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <mass value="0.0"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Nema17_Mount_Update3_1">
+  <inertial>
+    <origin xyz="0.0 0.0 -0.05" rpy="0 0 0"/>
+    <mass value="0.0"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/Nema17_Mount_Update3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/Nema17_Mount_Update3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Body1_1">
+  <inertial>
+    <origin xyz="-0.0007196722915211019 0.00011575873578459436 0.032409131760710086" rpy="0 0 0"/>
+    <mass value="0.36704191460559454"/>
+    <inertia ixx="0.000443" iyy="0.000367" izz="0.000235" ixy="0.0" iyz="-0.0" ixz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.0 -0.082937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/Body1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.0 -0.082937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/Body1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Body1__1__1">
+  <inertial>
+    <origin xyz="-0.017366493712780963 7.655454982927683e-06 0.06976004743712558" rpy="0 0 0"/>
+    <mass value="1.2504057024945578"/>
+    <inertia ixx="0.00534" iyy="0.004929" izz="0.000585" ixy="-0.0" iyz="-0.0" ixz="-0.00016"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.01865 -0.000108 -0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/Body1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.01865 -0.000108 -0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/Body1__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="End_Cap_Update_1">
+  <inertial>
+    <origin xyz="0.024937986846302655 8.981733421949481e-05 0.02646485967899803" rpy="0 0 0"/>
+    <mass value="1.344512093298758"/>
+    <inertia ixx="0.002652" iyy="0.002464" izz="0.000769" ixy="0.0" iyz="-2e-06" ixz="0.000208"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.00635 -0.000108 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/End_Cap_Update_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.00635 -0.000108 -0.285" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/End_Cap_Update_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Body1__2__1">
+  <inertial>
+    <origin xyz="9.076672763811925e-06 -0.0020343608650406782 0.056528762361032214" rpy="0 0 0"/>
+    <mass value="1.0581850020901606"/>
+    <inertia ixx="0.002234" iyy="0.002458" izz="0.000947" ixy="-0.0" iyz="-1e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.000328 -0.39865" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/Body1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.000328 -0.39865" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/Body1__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Body50__1__1">
+  <inertial>
+    <origin xyz="-0.0005652724938543265 -0.030726130572138893 -0.3753508546223778" rpy="0 0 0"/>
+    <mass value="0.881602969900879"/>
+    <inertia ixx="0.000982" iyy="0.001059" izz="0.000379" ixy="0.0" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.000567 -0.031352 -0.92694" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/Body50__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.000567 -0.031352 -0.92694" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find complete_assembly_description)/meshes/Body50__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 1" type="fixed">
+  <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Nema17_Mount_Update3_1"/>
+</joint>
+
+<joint name="Revolute 2" type="continuous">
+  <origin xyz="-0.0 0.0 0.032937" rpy="0 0 0"/>
+  <parent link="Nema17_Mount_Update3_1"/>
+  <child link="Body1_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="Revolute 3" type="revolute">
+  <origin xyz="-0.01865 0.000108 0.052063" rpy="0 0 0"/>
+  <parent link="Body1_1"/>
+  <child link="Body1__1__1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 4" type="revolute">
+  <origin xyz="0.0123 0.0 0.15" rpy="0 0 0"/>
+  <parent link="Body1__1__1"/>
+  <child link="End_Cap_Update_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+  <limit upper="0.959931" lower="-4.101524" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 5" type="continuous">
+  <origin xyz="0.00635 0.00022 0.11365" rpy="0 0 0"/>
+  <parent link="End_Cap_Update_1"/>
+  <child link="Body1__2__1"/>
+  <axis xyz="0.0 0.001938 0.999998"/>
+</joint>
+
+<joint name="Revolute 6" type="revolute">
+  <origin xyz="0.000567 0.031024 0.52829" rpy="0 0 0"/>
+  <parent link="Body1__2__1"/>
+  <child link="Body50__1__1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="1.658063" lower="-1.658063" effort="100" velocity="100"/>
+</joint>
+
+</robot>
